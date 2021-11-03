@@ -1,4 +1,5 @@
-const container = document.getElementById('container')
+const container = document.getElementById('container');
+const errorDiv = document.getElementById('error');
 
 function createUserCard (data){
     for (let val of data){
@@ -63,10 +64,20 @@ function createUserCard (data){
     }
 }
 
+function displayError(error){
+    errorDiv.innerText = error;
+    errorDiv.style.display = 'block'
+}
+
 async function getUser() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await response.json();
-    createUserCard(data);
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await response.json();
+        createUserCard(data);
+    }
+    catch (error){
+        displayError(error);
+    }
 }
 
 getUser();
