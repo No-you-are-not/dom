@@ -1,11 +1,6 @@
 const container = document.getElementById('container');
 const buttonContainer = document.getElementById('btnBlock');
 const button = document.getElementById('callBtn');
-let boolButton = false;
-
-button.addEventListener('click', (e) => {
-    boolButton = true;
-})
 
 function createPlanetCards (data){
     let mainData = data.planets;
@@ -37,16 +32,13 @@ function createPlanetCards (data){
     }
 }
 
-let drawCardsPromise = new Promise((resolve, reject) => {
-    if (boolButton){
-
-    }
+button.addEventListener('click', (e) => {
+    fetch('https://trevadim.github.io/vue/data/data.json')
+        .then(response => response.json())
+        .then(data => {
+            document.addEventListener('load', createPlanetCards(data));
+        })
+        .catch(error => console.log(error))
 })
 
 
-// fetch('https://trevadim.github.io/vue/data/data.json')
-//     .then(response => response.json())
-//     .then(data => {
-//         document.addEventListener('load', createPlanetCards(data));
-//     })
-//     .catch(error => console.log(error))
