@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://i.pinimg.com/originals/73/6f/8b/736f8bb0d782ac89889edb11c8013b17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.callBtn{
+    width: 350px;
+    height: 60px;
+    font-size: 40px;
+    background-color: white;
+}
+
+.container {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 49.5% 49.5%;
+    justify-content: space-around;
+    row-gap: 10px;
+}
+
+.planet{
+    background-color: #1E2024;
+    /*background-image: url("https://c4.wallpaperflare.com/wallpaper/474/159/698/summer-black-night-revisited-wallpaper-preview.jpg");*/
+    background-image: url("https://i.pinimg.com/originals/73/6f/8b/736f8bb0d782ac89889edb11c8013b17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 50px;
+}
+
+.title{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.info-item{
+    padding: 20px 0;
+}
+
+.info-item:not(:first-child){
+    border-top: 1px solid white;
+}
+
+.picture{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.planet-picture{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    outline: 2px solid white;
+}
+
