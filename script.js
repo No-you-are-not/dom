@@ -1,6 +1,9 @@
-const timer = document.getElementById('timer');
-const stopButton = document.getElementById('stop');
-const continueButton = document.getElementById('continue')
+const container = document.getElementById('container')
+// const timer = document.getElementById('timer');
+// const stopButton = document.getElementById('stop');
+// const continueButton = document.getElementById('continue')
+//
+
 
 function setZero(date){
     if ((date+"").length === 1){
@@ -9,8 +12,23 @@ function setZero(date){
     return date;
 }
 
-let date = new Date();
-timer.innerHTML = date.getHours() + ":" + setZero(date.getMinutes()) + ":" + setZero(date.getSeconds());
+
+    let timer = document.createElement('h2');
+    timer.setAttribute('class', 'timer');
+    let date = new Date();
+    timer.innerHTML = date.getHours() + ":" + setZero(date.getMinutes()) + ":" + setZero(date.getSeconds());
+    let stopButton = document.createElement('button');
+    stopButton.setAttribute('class', 'button stop');
+    stopButton.innerHTML = 'Stop'
+    let continueButton = document.createElement('button');
+    continueButton.setAttribute('class', 'button continue');
+    continueButton.innerHTML = 'Continue';
+    container.appendChild(timer);
+    container.appendChild(stopButton);
+    container.appendChild(continueButton);
+
+
+
 
 function myTimer (){
     let today = new Date();
