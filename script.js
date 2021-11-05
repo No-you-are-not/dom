@@ -15,22 +15,22 @@ function createUserCard (data){
            title.innerText = 'Personal information';
        let username = document.createElement('div');
            username.setAttribute('class', 'username');
-           username.innerText = `username: ${val.username}`;
+           username.innerHTML = `<b>username:</b> ${val.username}`;
        let email = document.createElement('div');
            email.setAttribute('class', 'email');
-           email.innerText = `email: ${val.email}`;
+           email.innerHTML = `<b>email:</b> ${val.email}`;
        let address = document.createElement('div');
            address.setAttribute('class', 'address-name');
-           address.innerText = `address: ${val.address.city}, ${val.address.street} st, ${val.address.suite}`;
+           address.innerHTML = `<b>address:</b> ${val.address.city}, ${val.address.street} st, ${val.address.suite}`;
        let zip = document.createElement('div');
            zip.setAttribute('class', 'address-zip');
-           zip.innerText = `zip-code: ${val.address.zipcode}`;
+           zip.innerHTML = `<b>zip-code:</b> ${val.address.zipcode}`;
        let phone = document.createElement('div');
            phone.setAttribute('class', 'phone');
-           phone.innerText = `phone: ${val.phone}`;
+           phone.innerHTML = `<b>phone:</b> ${val.phone}`;
        let webpage = document.createElement('div');
            webpage.setAttribute('class', 'webpage');
-           webpage.innerText = `website: ${val.website}`;
+           webpage.innerHTML = `<b>website:</b> ${val.website}`;
        let sectionWork = document.createElement('section');
            sectionWork.setAttribute('class', 'info-section');
        let titleWork = document.createElement('div');
@@ -38,13 +38,13 @@ function createUserCard (data){
            titleWork.innerText = 'Work information'
        let company = document.createElement('div');
            company.setAttribute('class', 'company');
-           company.innerText = `company name: ${val.company.name}`
+           company.innerHTML = `<b>company name:</b> ${val.company.name}`
        let phrase = document.createElement('div');
            phrase.setAttribute('class', 'phrase');
-           phrase.innerText = `catchprase: ${val.company.catchPhrase}`;
+           phrase.innerHTML = `<b>catchprase:</b> ${val.company.catchPhrase}`;
        let bs = document.createElement('div');
            bs.setAttribute('class', 'bs');
-           bs.innerText = `bs: ${val.company.bs}`;
+           bs.innerHTML = `<b>bs:</b> ${val.company.bs}`;
 // и вот когда я засетила всем елементам классы, я поняла, что процентов 70 классов не нужно бфло сетить, потому что я по ним не задвала стили, ну штож...
         sectionPers.appendChild(title);
         sectionPers.appendChild(username);
